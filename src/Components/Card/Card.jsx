@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function card({ product }) {
+export default function card({ product,deleteProduct }) {
 
   return (
     <div className="col-md-4 p-2 rounded ">
@@ -15,7 +15,8 @@ export default function card({ product }) {
           <h4 className={`${product.price>2000 && "bg-danger"}`}>pPrice: {product.price}</h4>
           <h4>pCategory: {product.category}</h4>
           <h4>pSale: {product.onSale}</h4>
-          <button className='btn btn-danger w-100'>Delete Product</button>
+          <button onClick={deleteProduct} className='btn btn-danger w-100'>Delete Product</button>
+          <button className='btn btn-success w-100'>Update Product</button>
         </div>
       </div>
     </div>

@@ -43,6 +43,9 @@ export default function About() {
   function changeCounter(amount) {
     setCounter(counter + amount)
   }
+  function deleteProduct(){
+    alert("Item Deleted")
+  }
   return (
     <div>
       <h2>Avout</h2>
@@ -52,7 +55,7 @@ export default function About() {
         <div className="row">
 
           {product.map(function (item) {
-            return <Card product={item} />
+            return <Card product={item} deleteProduct={deleteProduct} />
           })}
 
         </div>
