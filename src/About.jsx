@@ -9,13 +9,13 @@ export default function About() {
   const [counter, setCounter] = useState(0)
   const [product, setProduct] = useState([
     {
-      name: 'Asus ROG',
-      price: '50k',
+      name: 'Asus',
+      price: '40k',
       category: 'Laptop',
       onSale: true,
     },
     {
-      name: 'Samsung Odyssy G5',
+      name: 'Samsung ',
       price: '4k',
       category: 'Computers',
       onSale: true,
@@ -27,15 +27,15 @@ export default function About() {
       onSale: true,
     },
     {
-      name: 'product name',
-      price: '3000',
-      category: 'category',
+      name: 'Huawei Watch fit',
+      price: '1k',
+      category: 'Wearables',
       onSale: true,
     },
     {
-      name: 'product name',
-      price: '3000',
-      category: 'category',
+      name: 'Buds live',
+      price: '3k',
+      category: 'Headphones',
       onSale: true,
     }
 
