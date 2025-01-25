@@ -10,33 +10,33 @@ export default function About() {
   const [product, setProduct] = useState([
     {
       name: 'Asus',
-      price: '40k',
+      price: '40000',
       category: 'Laptop',
-      onSale: true,
+      onSale: false,
     },
     {
       name: 'Samsung ',
-      price: '4k',
+      price: '4000',
       category: 'Computers',
       onSale: true,
     },
     {
       name: 'S10 Lite',
-      price: '30k',
+      price: '30000',
       category: 'mobile',
       onSale: true,
     },
     {
       name: 'Huawei Watch fit',
-      price: '1k',
+      price: '1000',
       category: 'Wearables',
       onSale: true,
     },
     {
       name: 'Buds live',
-      price: '3k',
+      price: '3000',
       category: 'Headphones',
-      onSale: true,
+      onSale: false,
     }
 
   ])
