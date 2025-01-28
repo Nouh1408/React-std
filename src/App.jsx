@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import About from './About.jsx'
+import About from './components/About.jsx'
+import Home from './Components/Home.jsx'
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <button className='btn btn-danger' onClick={Increment}>+</button>
       </div>
       <About />
+      <Home />
     </>
   )
 }

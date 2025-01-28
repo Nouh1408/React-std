@@ -1,6 +1,10 @@
 import React from 'react'
 
-export default function card({ product,deleteProduct,updatePrice }) {
+export default function card({ 
+  product,
+  deleteProduct,
+  updatePrice 
+}) {
 
   return (
     <div className="col-md-4 p-2 rounded ">
