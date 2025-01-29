@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Card from '../Card/Card';
+import Card from '../Card/Card'
 
 
 
@@ -45,32 +45,27 @@ export default function About() {
     }
 
   ])
-  function changeCounter(amount) {
-    setCounter(counter + amount)
+  function deleteProduct(pId) {
+    let deepCopy = structuredClone(product);
+    deepCopy = deepCopy.filter((p) => p.id !== pId);
+    setProduct(deepCopy);
   }
-  function deleteProduct(pId){
-    // alert("Item Deleted")
-    let deepCopy = structuredClone(product)
-      deepCopy=deepCopy.filter(function(p){//important to use deepcopy = 
-      return p.id != pId
-    })
-
-    setProduct(deepCopy)
-
-
-    function updatePrice(pId){
-      let deepProducts = structuredClone(product)
-      deepProducts = deepProducts.map(function(p){ //not important to use deepcopy =
-        if(p.id == pId){
-          p.price +=50
-        }
-        return p
-      })
-      setProduct(deepProducts)
-    }
+  
+  // Move this function outside deleteProduct
+  function updatePrice(pId) {
+    let deepProducts = structuredClone(product);
+    deepProducts = deepProducts.map((p) => {
+      if (p.id === pId) {
+        p.price = Number(p.price) + 50; // Ensure price is a number
+      }
+      return p;
+    });
+    setProduct(deepProducts);
+  }
+  
   return (
     <div>
-      <h2>Avout</h2>
+      <h2>About Page</h2>
       <h3>Counter: {counter}</h3>
       <button className={`btn ${counter > 5 && "bg-danger"}`} onClick={() => changeCounter(1)}>Increment</button>
       <div className="bg-warning container">
@@ -88,4 +83,3 @@ export default function About() {
 
   )
   }
-}
