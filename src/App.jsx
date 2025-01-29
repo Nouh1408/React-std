@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import About from './components/About.jsx'
-import Home from './Components/Home.jsx'
+import About from './Components/About/About.jsx'
+import Home from './Components/Home/Home.jsx'
 
 
 function App() {
