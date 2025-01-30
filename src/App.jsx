@@ -1,29 +1,24 @@
-import { useState } from 'react'
 import './App.css'
 import About from './Components/About/About.jsx'
 import Home from './Components/Home/Home.jsx'
 import Contact from './Components/Contact/Contact.jsx'
 import Gallery from './Components/Gallery/Gallery.jsx'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
-
-function App() {
-  const [count, setCount] = useState(0)
-  function Increment() {
-    setCount(count + 1)
-  }
-  function Decrement() {
-    setCount(count - 1)
-  }
-
+export default function App() {
+  const router = createBrowserRouter([
+    { path: '/', element: <Home /> }, // Root route
+    { path: '/home', element: <Home /> },
+    { path: '/about', element: <About /> },
+    { path: '/contact', element: <Contact /> },
+    { path: '/gallery', element: <Gallery /> },
+  ])
+  
   return (
     <>
-
-      <Home />
-      <About />
-      <Gallery />
-      <Contact/>
+    
+  <RouterProvider router={router} />
     </>
+  
   )
 }
-
-export default App
