@@ -1,19 +1,13 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router';
+import Navbar from '../Navbar/Navbar';
 
 export default function Layout() {
   return (
     <>
-      <nav>
-        NAVBAR
-      </nav>
-
-      {/* This is where the child route components will be rendered */}
-      <Outlet />
-
-      <footer>
-        Footer
-      </footer>
+      <Navbar/>
+      <Outlet /> {/* Child routes will render here */}
+      <footer>Footer</footer>
     </>
   );
 }

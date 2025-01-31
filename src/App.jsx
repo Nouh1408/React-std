@@ -1,23 +1,24 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router';
 import Layout from './Components/Layout/Layout.jsx';
 import Home from './Components/Home/Home.jsx';
 import About from './Components/About/About.jsx';
 import Contact from './Components/Contact/Contact.jsx';
-import Gallery from './Components/Gallery/Gallery.jsx';
+import NotFound from './NotFound/NotFound.jsx';
 
-const router = createBrowserRouter([
-  {
-    path: '', 
-    element: <Layout />, // Wrap all pages inside Layout
-    children: [
-      { index:true  , element: <Home /> },  // Default route
-      { path: 'about', element: <About /> },
-      { path: 'contact', element: <Contact /> },
-      { path: '*', element: <h1>404 - Page Not Found</h1> }
-    ]
-  }
-]);
+
 
 export default function App() {
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Layout />,
+      children: [
+        { index: true, element: <Home /> }, 
+        { path: 'about', element: <About /> },
+        { path: 'contact', element: <Contact /> },
+        { path: '*', element: <NotFound/> }, 
+      ],
+    },
+  ]);
   return <RouterProvider router={router} />;
 }
